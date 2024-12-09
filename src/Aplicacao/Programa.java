@@ -97,11 +97,11 @@ public class Programa {
 						sc.nextLine();
 						System.out.print("Nome: ");
 						String nome = sc.nextLine();
-						System.out.println("Preco: ");
+						System.out.print("Preco: ");
 						double preco = sc.nextDouble();
-						System.out.println("Data de validade: ");
+						System.out.print("Data de validade: ");
 						Date dataValidade = sdf.parse(sc.next());
-						System.out.print("Categoria");
+						System.out.print("Categoria: ");
 						Categoria categoria = Categoria.valueOf(sc.next());
 						System.out.print("Quantidade: ");
 						int quantidade = sc.nextInt();
@@ -114,7 +114,7 @@ public class Programa {
 					}
 				break;
 				case 2: 
-					System.out.println("Voce deseja adicionar ou reduzir a quantidade do medicamento do estoque (A/R)? ");
+					System.out.print("Voce deseja adicionar ou reduzir a quantidade do medicamento do estoque (A/R)? ");
 					char ch2 = sc.next().charAt(0);
 					
 					if(Character.toUpperCase(ch2) == 'A') {
@@ -155,15 +155,19 @@ public class Programa {
 		else {
 			System.out.println("ACESSO NEGADO#!");
 		}
+		
 		}
+		
 		catch(ParseException e) {
-			System.out.println("Formato de data digitado incompativel!");
+			System.out.println("\n----- Formato de data digitado incompativel! -----");
 		}
+		
 		catch(IllegalArgumentException e) {
-			System.out.println("Dado digitado incompativel! Verique se a Marca ou Categoria existem no estoque !");
+			System.out.println("\n----- Dado digitado incompativel! Verique se a Marca ou Categoria existem no estoque ! -----");
 		}
+		
 		catch (InputMismatchException e) {
-			System.out.println("Dado digitado incompativel!");
+			System.out.println("\n----- Dado digitado incompativel! -----");
 		}
 		
 		

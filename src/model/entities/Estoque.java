@@ -87,10 +87,11 @@ public class Estoque implements ControleEstoque{
 
 	@Override
 	public void relatorioEstoque() {
-		System.out.println("--------- RELATORIO DO ESTOQUE --------- ");
+		System.out.println("\n--------- RELATORIO DO ESTOQUE --------- ");
 		for(Medicamento remedio: medicamentos) {
 			System.out.println(remedio + "\n");
 		}
+		System.out.println("-----------------------------------------");
 	}
 	
 	}
